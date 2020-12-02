@@ -2,3 +2,6 @@ data/*
 pagerank/*
 *.zip
 *.csv
+__pycache__/*
+.ipynb_checkpoints/*
+old_viz/*
