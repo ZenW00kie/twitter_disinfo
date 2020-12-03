@@ -8,5 +8,5 @@ def louvain(graph, partition=None, modularity = -.5):
     while new_modularity > modularity:
         modularity, new_modularity = new_modularity, -.5
         partition = comm.best_partition(graph, partition)
-        new_modularity = community_louvain.modularity(partition, graph)
-    return partition, comm
+        new_modularity = comm.modularity(partition, graph)
+    return partition, modularity

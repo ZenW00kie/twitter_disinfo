@@ -105,15 +105,15 @@ def build_nodes(users, interactions=None):
     return nodes
 
 def full_network():
-    users_files = ['data/iran/iran_users.csv']
+    users_files = ['../data/iran/iran_users.csv']
     iran_users = build_users(users_files)
-    directories = ['data/iran/tweets/']
+    directories = ['../data/iran/tweets/']
     ir_interactions = build_interactions(directories)
     ir_interactions['country'] = 'iran'
     iran_users = build_nodes(iran_users, ir_interactions)
-    users_files = ['data/russia/russia_users.csv','data/ira/ira_users.csv']
+    users_files = ['../data/russia/russia_users.csv','../data/ira/ira_users.csv']
     russian_users = build_users(users_files)
-    directories = ['data/russia/tweets/','data/ira/tweets/']
+    directories = ['../data/russia/tweets/','../data/ira/tweets/']
     ru_interactions = build_interactions(directories)
     ru_interactions['country'] = 'russia'
     russian_users = build_nodes(russian_users, ru_interactions)
@@ -127,9 +127,9 @@ def full_network():
     return users, interactions
 
 def user_info():
-    users_files = ['data/iran/iran_users.csv']
+    users_files = ['../data/iran/iran_users.csv']
     iran_users = build_users(users_files)
-    users_files = ['data/russia/russia_users.csv','data/ira/ira_users.csv']
+    users_files = ['../data/russia/russia_users.csv','../data/ira/ira_users.csv']
     russian_users = build_users(users_files)
     iran_users['country'] = 'iran'
     russian_users['country'] = 'russia'
